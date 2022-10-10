@@ -54,7 +54,7 @@ def draw(xs: list, ys: list, zs: list, num: int) -> None:
     ax.set_ylabel("Y Axis")
     ax.set_zlabel("Z Axis")
     ax.set_title("Lorenz Attractor")
-    plt.savefig(f'images/Lorenz-Attractor-{num}')
+    plt.savefig(f'images/Attractor-{num}')
 
 
 def main():
