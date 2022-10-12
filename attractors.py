@@ -49,7 +49,7 @@ class LorenzAttractorIterator:
 
 def draw(xs: list, ys: list, zs: list, num: int) -> None:
     fig, ax = plt.subplots(3, 2,
-                           figsize=(16, 8),
+                           figsize=(17, 8),
                            constrained_layout=True)
     fig.suptitle(f"Lorenz Attractor {num+1}", fontsize=16)
     ax[0][0].plot(xs, ys, lw=1, c=COLORS[num])
@@ -64,7 +64,6 @@ def draw(xs: list, ys: list, zs: list, num: int) -> None:
 
     for i in range(3):
         ax[i][1].axis('off')
-        # ax[i][0].label_outer()
 
     ax = fig.add_subplot(1, 2, 2, projection='3d')
 
