@@ -51,7 +51,7 @@ def draw(xs: list, ys: list, zs: list, num: int) -> None:
     fig, ax = plt.subplots(3, 2,
                            figsize=(17, 8),
                            constrained_layout=True)
-    fig.suptitle(f"Lorenz Attractor {num+1}", fontsize=16)
+    fig.suptitle(f"Lorenz Attractor {num+1}", fontsize=24)
     ax[0][0].plot(xs, ys, lw=1, c=COLORS[num])
     ax[0][0].set_xlabel("X Axis")
     ax[0][0].set_ylabel("Y Axis")
