@@ -48,12 +48,26 @@ class LorenzAttractorIterator:
 
 
 def draw(xs: list, ys: list, zs: list, num: int) -> None:
-    fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
+    fig, ax = plt.subplots(3, 2, figsize=(12, 6))
+    fig.suptitle(f"Lorenz Attractor {num}", fontsize=16)
+    ax[0][0].plot(xs, ys, lw=1, c=COLORS[num])
+    ax[0][0].set_xlabel("X Axis")
+    ax[0][0].set_ylabel("Y Axis")
+    ax[1][0].plot(ys, zs, lw=1, c=COLORS[num])
+    ax[1][0].set_xlabel("Y Axis")
+    ax[1][0].set_ylabel("Z Axis")
+    ax[2][0].plot(xs, zs, lw=1, c=COLORS[num])
+    ax[2][0].set_xlabel("X Axis")
+    ax[2][0].set_ylabel("Z Axis")
+    for i in range(3):
+        ax[i][1].axis('off')
+
+    ax = fig.add_subplot(1, 2, 2, projection='3d')
+
     ax.plot(xs, ys, zs, lw=1, c=COLORS[num])
     ax.set_xlabel("X Axis")
     ax.set_ylabel("Y Axis")
     ax.set_zlabel("Z Axis")
-    ax.set_title(f"Lorenz Attractor {num}")
     plt.savefig(f'images/Attractor-{num}')
 
 
