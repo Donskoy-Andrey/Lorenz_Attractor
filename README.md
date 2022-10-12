@@ -23,5 +23,5 @@ for state1, state2 in zip(attractor1, attractor2):
 * Для численного интегрирования предлагается использовать класс [scipy.integrate.ode](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.ode.html).
 
 ## Результаты отрисовки двух заданных аттракторов:
-![att1](https://gitlab.sirius-web.org/students/2022/donskoy.ae/hometasks/task6/-/raw/master/images/Attractor-0.png)
-![att2](https://gitlab.sirius-web.org/students/2022/donskoy.ae/hometasks/task6/-/raw/master/images/Attractor-1.png)
+![att1](https://gitlab.sirius-web.org/students/2022/donskoy.ae/hometasks/task6/-/raw/master/images/Attractor-1.png)
+![att2](https://gitlab.sirius-web.org/students/2022/donskoy.ae/hometasks/task6/-/raw/master/images/Attractor-2.png)
