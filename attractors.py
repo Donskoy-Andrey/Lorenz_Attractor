@@ -1,5 +1,6 @@
 from scipy.integrate import ode
 import matplotlib.pyplot as plt
+import pandas as pd
 
 
 COLORS = ['r', 'g']
@@ -74,6 +75,10 @@ def draw(xs: list, ys: list, zs: list, num: int) -> None:
     plt.savefig(f'images/Attractor-{num+1}')
 
 
+def save_data(xs: list, ys: list, zs: list, path: str = 'data/data.txt') -> None:
+    pd.DataFrame(list(zip(xs, ys, zs))).to_csv(path, header=False, index=False)
+
+
 def main():
     attractor1 = LorenzAttractor([1, 2, 3],
                                  [10, 8/3, 28],
@@ -91,6 +96,7 @@ def main():
             zs.append(z)
             if len(xs) > 1000:
                 draw(xs, ys, zs, num=num)
+                save_data(xs, ys, zs, path=f'data/data-{num+1}.txt')
                 break
 
 
