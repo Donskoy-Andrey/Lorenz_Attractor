@@ -4,7 +4,8 @@ import pandas as pd
 
 
 COLORS = ['r', 'g']
-
+for i in range(3):
+    ax[i].grid(True)
 
 class LorenzAttractor:
     def __init__(self,
