@@ -13,7 +13,7 @@
 attractor1 = LorenzAttractor([1,2,3], [10, 8/3, 28], 0.1)
 attractor2 = LorenzAttractor([2,8,1], [10, 8/3, 28], 0.1)
 for state1, state2 in zip(attractor1, attractor2):
-  print(state1, state2)
+    print(state1, state2)
 ```
 В результате данная программа должна выводить на экран состояния аттракторов в моменты времени `0, 0.1, 0.2, 0.3, ...`.
 
